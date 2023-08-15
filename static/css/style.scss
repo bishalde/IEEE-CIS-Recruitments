@@ -13,6 +13,13 @@ $fontcolor:#ffffff;
     font-family: 'Poppins', sans-serif;
 }
 
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 html{
     font-size: 20px;
 }
@@ -117,10 +124,167 @@ header{
     }
 }
 
+.form-container{
+    position: relative;
+    top: 100px;
+    width: 100%;
+    text-align: center;
+    padding: 20px 300px;
+
+
+    form{
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+
+        label{
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: $fontcolor;
+            letter-spacing: 0.1rem;
+
+            span{
+                color: rgb(157, 255, 0);
+            }
+        }
+
+        input{
+            width: 100%;
+            padding: 10px 20px;
+            background: $navcolor;
+            color: $fontcolor;
+            outline: none;
+            border: 2px solid rgb(74, 74, 74);
+            border-radius: 20px;
+            font-size: 1.1rem;
+            letter-spacing: 0.1rem;
+            transition: all 0.3s ease;
+
+            &:focus{
+                border: 2px solid rgb(157, 255, 0);
+            }
+        }
+
+        textarea{
+            width: 100%;
+            padding: 10px 20px;
+            background: $navcolor;
+            color: $fontcolor;
+            outline: none;
+            border: 2px solid rgb(74, 74, 74);
+            border-radius: 20px;
+            font-size: .8rem;
+            letter-spacing: 0.1rem;
+            transition: all 0.3s ease;
+            max-width: 100%;
+            min-width: 100%;
+            height: 180px;
+
+            &:focus{
+                border: 2px solid rgb(157, 255, 0);
+            }
+        }
+
+        select{
+            -webkit-appearance: none;
+            width: 40%;
+            padding: 10px 20px;
+            background: $navcolor;
+            color: $fontcolor;
+            outline: none;
+            border: 2px solid rgb(74, 74, 74);
+            border-radius: 20px;
+            font-size: 1.1rem;
+            letter-spacing: 0.1rem;
+            transition: all 0.3s ease;
+
+            &:focus{
+                border: 2px solid rgb(157, 255, 0);
+            }
+
+            &.domains{
+                width: 100%;
+            }
+        }
+
+        h3{
+            font-size: .8rem;
+            color: rgb(157, 255, 0);
+            letter-spacing: 0.1rem;
+        }
+
+        .buttons-form{
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            align-items: center;
+
+            button{
+                padding: 10px 40px;
+                background: $navcolor;
+                color: $fontcolor;
+                border: 1px solid $fontcolor;
+                outline: none;
+                border-radius: 20px;
+                font-size: 1.1rem;
+                letter-spacing: 0.1rem;
+                transition: all 0.3s ease;
+                cursor: pointer;
+
+                &.primary{
+                    background-color: #ffffff;
+                    color: $navcolor;
+                }
+
+                &:hover{
+                    background: rgb(157, 255, 0);
+                    color: $navcolor;
+                }
+
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1300px){
+    .form-container{
+        padding: 20px 150px;
+    }
+
+    
+    
+
+}
+
+
 
 @media screen and (max-width: 1000px){
     html{
         font-size: 17px;
+    }
+
+    .form-container{
+        padding: 20px 100px;
     }
 
 }
@@ -162,6 +326,10 @@ header{
                 font-size: 1rem;
             }
         }
+    }
+
+    .form-container{
+        padding: 20px 30px;
     }
 
 }

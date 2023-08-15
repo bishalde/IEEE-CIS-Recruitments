@@ -14,7 +14,98 @@
         <h1>IEEE CIS</h1>
     </header>
     <div class="intro-heading">
-        <h1>Under Development</h1>
+        <h1>Application form</h1>
+    </div>
+    <div class="form-container">
+        <form action="#" method="post">
+            <label for="fullname">Full Name <span>*</span></label>
+            <input type="text" placeholder="Enter Full Name" onkeydown="return /[a-zA-Z]/i.test(event.key)">
+            
+            <label for="registrationNumber">Registration Number <span>*</span></label>
+            <input type="text" placeholder="Enter Registration">
+            
+            
+            <label for="department">Department <span>*</span></label>
+            <input type="text" placeholder="Enter Department">
+            
+            
+            <label for="section">Section <span>*</span></label>
+            <input type="text" placeholder="Enter section">
+            
+            
+            
+            
+            <label for="srmmail">SRM's Mail ID <span>*</span></label>
+            <input type="email" placeholder="Enter SRM Mail ID">
+            
+            <label for="personalmail">Personal Mail ID <span>*</span></label>
+            <input type="email" placeholder="Enter Personal Mail ID">
+            
+            <label for="mobile">Mobile Number <span>*</span></label>
+            <input type="number" placeholder="Enter Registration">
+            
+            
+            <label for="whatsappnumber">WhatsApp Number <span>*</span></label>
+            <input type="number" placeholder="Enter WhatsApp Number">
+            
+
+            <label for="year">Year<span>*</span></label>
+            <select name="year" id="year">
+                <option value="0" selected>Select Year</option>
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
+            </select>
+            
+            <label for="domain1">Domain [1<sup>st</sup> Preference] <span>*</span></label>
+            <select class="domains" name="domain1" id="domain1">
+                <option value="0" selected>Select 1<sup>st</sup> Preference</option>
+                <option value="Creative">Creative</option>
+                <option value="Social media & PR">Social media & PR</option>
+                <option value="sponsorship & content">sponsorship & content</option>
+                <option value="Research and Development">Research and Development</option>
+                <option value="Web Development (Front end)">Web Development (Front end)</option>
+                <option value="Web Development (Back end)">Web Development (Back end)</option>
+                <option value="Operations">Operations</option>
+            </select>
+
+            <label for="domain2">Domain [2<sup>nd</sup> Preference] <span>*</span></label>
+            <select class="domains" name="domain2" id="domain2">
+                <option value="0" selected>Select 1<sup>nd</sup> Preference</option>
+                <option value="Creative">Creative</option>
+                <option value="Social media & PR">Social media & PR</option>
+                <option value="sponsorship & content">sponsorship & content</option>
+                <option value="Research and Development">Research and Development</option>
+                <option value="Web Development (Front end)">Web Development (Front end)</option>
+                <option value="Web Development (Back end)">Web Development (Back end)</option>
+                <option value="Operations">Operations</option>
+            </select>
+
+            <label for="linkedin">LinkedIn Profile URL</label>
+            <input type="url" name="linkedin" id="linkedin" placeholder="Enter LinkedIn Profile URL">
+
+            <label for="github">GitHub URL</label>
+            <input type="url" name="linkedin" id="linkedin" placeholder="Enter Github Profile URL">
+            
+            <label for="resume">Resume URL</label>
+            <h3>Upload your resume on G-Drive and create a sharable URl..!</h3>
+            <input type="url" name="linkedin" id="linkedin" placeholder="Enter Resume URL">
+            
+
+            <label for="question1">Why do you want to join us? [not more than 100 words]<span>*</span>
+            </label>
+            <textarea name="" id="" placeholder="Tell Reason Why??"></textarea>
+           
+            <label for="question2">Any previous experiences? [if not, write NA]<span>*</span>
+            </label>
+            <textarea name="" id="" placeholder="Experiences?"></textarea>
+
+            <div class="buttons-form">
+                <button class="primary" type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
     </div>
 </body>
 </html>

@@ -8,6 +8,12 @@
   font-family: "Poppins", sans-serif;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 html {
   font-size: 20px;
 }
@@ -99,9 +105,124 @@ header h1 {
   color: #202021;
 }
 
+.form-container {
+  position: relative;
+  top: 100px;
+  width: 100%;
+  text-align: center;
+  padding: 20px 300px;
+}
+.form-container form {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form-container form label {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #ffffff;
+  letter-spacing: 0.1rem;
+}
+.form-container form label span {
+  color: rgb(157, 255, 0);
+}
+.form-container form input {
+  width: 100%;
+  padding: 10px 20px;
+  background: #202021;
+  color: #ffffff;
+  outline: none;
+  border: 2px solid rgb(74, 74, 74);
+  border-radius: 20px;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  transition: all 0.3s ease;
+}
+.form-container form input:focus {
+  border: 2px solid rgb(157, 255, 0);
+}
+.form-container form textarea {
+  width: 100%;
+  padding: 10px 20px;
+  background: #202021;
+  color: #ffffff;
+  outline: none;
+  border: 2px solid rgb(74, 74, 74);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  transition: all 0.3s ease;
+  max-width: 100%;
+  min-width: 100%;
+  height: 180px;
+}
+.form-container form textarea:focus {
+  border: 2px solid rgb(157, 255, 0);
+}
+.form-container form select {
+  -webkit-appearance: none;
+  width: 40%;
+  padding: 10px 20px;
+  background: #202021;
+  color: #ffffff;
+  outline: none;
+  border: 2px solid rgb(74, 74, 74);
+  border-radius: 20px;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  transition: all 0.3s ease;
+}
+.form-container form select:focus {
+  border: 2px solid rgb(157, 255, 0);
+}
+.form-container form select.domains {
+  width: 100%;
+}
+.form-container form h3 {
+  font-size: 0.8rem;
+  color: rgb(157, 255, 0);
+  letter-spacing: 0.1rem;
+}
+.form-container form .buttons-form {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+}
+.form-container form .buttons-form button {
+  padding: 10px 40px;
+  background: #202021;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  outline: none;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.form-container form .buttons-form button.primary {
+  background-color: #ffffff;
+  color: #202021;
+}
+.form-container form .buttons-form button:hover {
+  background: rgb(157, 255, 0);
+  color: #202021;
+}
+
+@media screen and (max-width: 1300px) {
+  .form-container {
+    padding: 20px 150px;
+  }
+}
 @media screen and (max-width: 1000px) {
   html {
     font-size: 17px;
+  }
+  .form-container {
+    padding: 20px 100px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -133,5 +254,8 @@ header h1 {
   .intro-heading .details a {
     padding: 10px 20px;
     font-size: 1rem;
+  }
+  .form-container {
+    padding: 20px 30px;
   }
 }/*# sourceMappingURL=style.css.map */
