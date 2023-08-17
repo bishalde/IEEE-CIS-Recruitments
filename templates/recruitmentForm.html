@@ -13,45 +13,53 @@
     <header>
         <h1>IEEE CIS</h1>
     </header>
+    {% if status != None %}
+    <script>
+        alert("{{ message }}")
+    </script>
+    {% endif %}
     <div class="intro-heading">
         <h1>Application form</h1>
     </div>
     <div class="form-container">
-        <form action="#" method="post">
+        <form action="{% url 'recruitmentForm' %}" method="post">
+            {% csrf_token %}
             <label for="fullname">Full Name <span>*</span></label>
-            <input type="text" placeholder="Enter Full Name" onkeydown="return /[a-zA-Z]/i.test(event.key)">
+            <input required  type="text" id="fullname" placeholder="Enter Full Name" onkeydown="return /[a-zA-Z ]/i.test(event.key)" name="fullname">
             
             <label for="registrationNumber">Registration Number <span>*</span></label>
-            <input type="text" placeholder="Enter Registration">
+            <input required type="text" id="registrationNumber" placeholder="Enter Registration" name="registrationNumber">
             
             
             <label for="department">Department <span>*</span></label>
-            <input type="text" placeholder="Enter Department">
+            <input required type="text" placeholder="Enter Department" id="department"
+            name="department">
             
             
             <label for="section">Section <span>*</span></label>
-            <input type="text" placeholder="Enter section">
+            <input required type="text" placeholder="Enter section" id="section"
+            name="section">
             
             
             
             
             <label for="srmmail">SRM's Mail ID <span>*</span></label>
-            <input type="email" placeholder="Enter SRM Mail ID">
+            <input required type="email" placeholder="Enter SRM Mail ID" name="srmmail" id="srmmail">
             
             <label for="personalmail">Personal Mail ID <span>*</span></label>
-            <input type="email" placeholder="Enter Personal Mail ID">
+            <input required type="email" id="personalmail" placeholder="Enter Personal Mail ID" name="personalmail">
             
             <label for="mobile">Mobile Number <span>*</span></label>
-            <input type="number" placeholder="Enter Registration">
+            <input required type="number" minlength="10" maxlength="11" id="mobile" placeholder="Enter Registration" name="mobile">
             
             
             <label for="whatsappnumber">WhatsApp Number <span>*</span></label>
-            <input type="number" placeholder="Enter WhatsApp Number">
+            <input required type="number" minlength="10"  maxlength="11" id="whatsappnumber" placeholder="Enter WhatsApp Number" name="whatsappnumber">
             
 
             <label for="year">Year<span>*</span></label>
-            <select name="year" id="year">
-                <option value="0" selected>Select Year</option>
+            <select name="year" id="year" required>
+                <option value="">Select Year</option>
                 <option value="1">1st Year</option>
                 <option value="2">2nd Year</option>
                 <option value="3">3rd Year</option>
@@ -59,8 +67,8 @@
             </select>
             
             <label for="domain1">Domain [1<sup>st</sup> Preference] <span>*</span></label>
-            <select class="domains" name="domain1" id="domain1">
-                <option value="0" selected>Select 1<sup>st</sup> Preference</option>
+            <select class="domains" name="domain1" id="domain1" required>
+                <option value="">Select 1<sup>st</sup> Preference</option>
                 <option value="Creative">Creative</option>
                 <option value="Social media & PR">Social media & PR</option>
                 <option value="sponsorship & content">sponsorship & content</option>
@@ -71,8 +79,8 @@
             </select>
 
             <label for="domain2">Domain [2<sup>nd</sup> Preference] <span>*</span></label>
-            <select class="domains" name="domain2" id="domain2">
-                <option value="0" selected>Select 1<sup>nd</sup> Preference</option>
+            <select  class="domains" name="domain2" id="domain2" required>
+                <option value="">Select 1<sup>nd</sup> Preference</option>
                 <option value="Creative">Creative</option>
                 <option value="Social media & PR">Social media & PR</option>
                 <option value="sponsorship & content">sponsorship & content</option>
@@ -83,23 +91,23 @@
             </select>
 
             <label for="linkedin">LinkedIn Profile URL</label>
-            <input type="url" name="linkedin" id="linkedin" placeholder="Enter LinkedIn Profile URL">
+            <input  type="url" name="linkedin" id="linkedin" placeholder="Enter LinkedIn Profile URL">
 
             <label for="github">GitHub URL</label>
-            <input type="url" name="linkedin" id="linkedin" placeholder="Enter Github Profile URL">
+            <input  type="url" name="github" id="github" placeholder="Enter Github Profile URL">
             
             <label for="resume">Resume URL</label>
             <h3>Upload your resume on G-Drive and create a sharable URl..!</h3>
-            <input type="url" name="linkedin" id="linkedin" placeholder="Enter Resume URL">
+            <input  type="url" name="resume" id="resume" placeholder="Enter Resume URL">
             
 
             <label for="question1">Why do you want to join us? [not more than 100 words]<span>*</span>
             </label>
-            <textarea name="" id="" placeholder="Tell Reason Why??"></textarea>
+            <textarea required name="question1" id="question1" placeholder="Tell Reason Why??"></textarea>
            
             <label for="question2">Any previous experiences? [if not, write NA]<span>*</span>
             </label>
-            <textarea name="" id="" placeholder="Experiences?"></textarea>
+            <textarea required name="question2" id="question2" placeholder="Experiences?"></textarea>
 
             <div class="buttons-form">
                 <button class="primary" type="submit">Submit</button>

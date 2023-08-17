@@ -22,6 +22,22 @@ body {
   background: #090d1f;
 }
 
+.noti {
+  z-index: 1000;
+  position: absolute;
+  right: 20px;
+  top: 150px;
+  width: 50%;
+  padding: 5px 10px;
+  border: 2px solid #090d1f;
+  border-radius: 10px;
+  background-color: rgb(157, 255, 0);
+}
+.noti h1 {
+  color: #090d1f;
+  font-size: 1rem;
+}
+
 header {
   z-index: 1000;
   position: fixed;
@@ -162,7 +178,7 @@ header h1 {
 }
 .form-container form select {
   -webkit-appearance: none;
-  width: 40%;
+  width: 50%;
   padding: 10px 20px;
   background: #202021;
   color: #ffffff;

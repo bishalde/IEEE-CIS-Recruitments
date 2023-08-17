@@ -5,12 +5,15 @@
 
 $navcolor:#202021;
 $background:#090d1f;
+$contastcolor:rgb(157, 255, 0);
 $fontcolor:#ffffff;
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+
 }
 
 
@@ -27,6 +30,27 @@ html{
 body{
     background: $background;
 }
+
+
+.noti{
+    z-index: 1000;
+    position: absolute;
+    right: 20px;
+    top: 150px;
+    width: 50%;
+    padding: 5px 10px;
+    border: 2px solid $background;
+    border-radius: 10px;
+
+    background-color: $contastcolor;
+    // transform: translateX(110%);
+
+    h1{
+        color: $background;
+        font-size: 1rem;
+    }
+}
+
 
 header{
     z-index: 1000;
@@ -189,7 +213,7 @@ header{
 
         select{
             -webkit-appearance: none;
-            width: 40%;
+            width: 50%;
             padding: 10px 20px;
             background: $navcolor;
             color: $fontcolor;
