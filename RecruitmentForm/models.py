@@ -20,6 +20,8 @@ class Registrations(models.Model):
     question1=models.TextField(max_length=1000)
     question2=models.TextField(max_length=1000)
 
+    status=models.CharField(max_length=20,default='Pending')
+
 
     def __str__(self):
         return self.fullname+' - '+self.registrationNumber
